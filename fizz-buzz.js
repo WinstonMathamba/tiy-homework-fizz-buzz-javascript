@@ -3,32 +3,36 @@
  */
 
 
-function fizzbuzz(start, end) {
+function fizzbuzz() {
 
-    for(var x = start; x <= end; x++) {
+    this.doIt = function(start, end) {
 
-        // for multiples of 3 & 5 return Fizzbuzz
-        if ((x % 3 == 0) && (x % 5 == 0)) {
-            console.log("FizzBuzz");
+            for (var x = start; x <= end; x++) {
+
+            // for multiples of 3 & 5 return Fizzbuzz
+            if ((x % 3 == 0) && (x % 5 == 0)) {
+                console.log("FizzBuzz");
+            }
+
+            // for multiples of 3 Fizz
+            else if (x % 3 == 0) {
+                console.log("Fizz");
+            }
+
+            else if (x % 5 == 0) {
+                console.log("Buzz");
+            }
+            else {
+                console.log(x);
+            }
+
         }
-
-        // for multiples of 3 Fizz
-        else if (x % 3 == 0) {
-            console.log("Fizz");
-        }
-
-        else if (x % 5 == 0) {
-            console.log("Buzz");
-        }
-        else {
-            console.log(x);
-        }
-
     }
-
 }
+    var fizzbuzz = new fizzbuzz();
 
-    console.log(fizzbuzz(1,100));
+        fizzbuzz.doIt(1,100)
+
 
 
 
